@@ -1,0 +1,50 @@
+<div class="sidenav flex flex-col w-full h-full gap-2" [ngClass]="{expanded}">
+    <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <span class="icon">
+            <i class="fa-solid fa-gauge"></i>
+        </span>
+        <span class="append">
+            Dashboard
+        </span>
+    </a>
+    <a [routerLink]="['/typography']" routerLinkActive="active">
+        <span class="icon">
+            <i class="fa-solid fa-font"></i>
+        </span>
+        <span class="append">
+            Typography
+        </span>
+    </a>
+    <a [routerLink]="['/tables']" routerLinkActive="active">
+        <span class="icon">
+            <i class="fa-solid fa-table"></i>
+        </span>
+        <span class="append">
+            Tables
+        </span>
+    </a>
+    <a [routerLink]="['/charts']" routerLinkActive="active">
+        <span class="icon">
+            <i class="fa-solid fa-chart-simple"></i>
+        </span>
+        <span class="append">
+            Charts
+        </span>
+    </a>
+    <a [routerLink]="['/ui-elements']" routerLinkActive="active">
+        <span class="icon">
+            <i class="fa-solid fa-cubes-stacked"></i>
+        </span>
+        <span class="append">
+            UI Elements
+        </span>
+    </a>
+    <a [routerLink]="['/forms']" routerLinkActive="active">
+        <span class="icon">
+            <i class="fa-brands fa-wpforms"></i>
+        </span>
+        <span class="append">
+            Forms
+        </span>
+    </a>
+</div>

@@ -1,0 +1,19 @@
+@use '../config/colors' as colors;
+
+.breadcrumb {
+    padding: 0.5rem 1rem;
+    list-style: none;
+
+    & > * {
+        display: inline;
+        font-size: 1rem;
+
+        & + *{
+            &::before {
+                color: colors.$russian-violet;
+                content: "/\00a0";
+                padding: 0.5rem;
+            }
+        }
+    }
+}

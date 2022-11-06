@@ -1,0 +1,29 @@
+@use '../config/colors' as colors;
+
+@mixin main {
+    /* Created with https://www.css-gradient.com */
+    background: colors.$patriarch;
+    background: -webkit-radial-gradient(bottom left, colors.$patriarch, colors.$russian-violet);
+    background: -moz-radial-gradient(bottom left, colors.$patriarch, colors.$russian-violet);
+    background: radial-gradient(to top right, colors.$patriarch, colors.$russian-violet);
+}
+
+@mixin main-dark {
+    /* Created with https://www.css-gradient.com */
+    background: darken($color: colors.$patriarch, $amount: 10);
+    background: -webkit-radial-gradient(
+        bottom left, 
+        darken($color: colors.$patriarch, $amount: 10), 
+        darken($color: colors.$russian-violet, $amount: 10)
+    );
+    background: -moz-radial-gradient(
+        bottom left, 
+        darken($color: colors.$patriarch, $amount: 10), 
+        darken($color: colors.$russian-violet, $amount: 10)
+    );
+    background: radial-gradient(
+        to top right, 
+        darken($color: colors.$patriarch, $amount: 10), 
+        darken($color: colors.$russian-violet, $amount: 10)
+    );
+}

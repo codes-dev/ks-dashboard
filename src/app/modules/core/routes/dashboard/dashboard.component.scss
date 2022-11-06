@@ -1,0 +1,17 @@
+.dashboard {
+    & .mat-table {
+        background: transparent;
+        height: calc(100% - 3.66em);
+    }
+
+    & .mat-elevation-z8 {
+        box-shadow: none;
+    }
+
+    & .flex {
+        & > * {
+            flex: 1 1 auto;
+            height: auto;
+        }
+    }
+}

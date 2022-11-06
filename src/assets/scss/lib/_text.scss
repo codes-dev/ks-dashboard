@@ -1,0 +1,27 @@
+@use '../config/colors' as colors;
+
+.text{
+    &-success {
+        color: colors.$success;
+    }
+
+    &-danger {
+        color: colors.$danger;
+    }
+
+    &-info {
+        color: colors.$info;
+    }
+
+    &-warning {
+        color: colors.$warning;
+    }
+
+    &-russian-violet {
+        color: colors.$russian-violet;
+    }
+
+    &-patriarch {
+        color: colors.$patriarch;
+    }
+}

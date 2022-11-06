@@ -1,0 +1,40 @@
+<div class="toolbar">
+    <mat-toolbar color="primary">
+        <button mat-icon-button id="sidenavToggle" aria-label="Toggle sidenav" (click)="toggleSidenav()">
+            <i 
+            class="fa-solid" 
+            [ngClass]="{'fa-bars': !expanded, 'fa-times': expanded}"></i>
+        </button>
+        <span class="ml-3">
+            KODEZ
+        </span>
+        <span class="spacer"></span>
+        <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <i class="fa-solid fa-heart"></i>
+        </button> -->
+        <button mat-icon-button id="notificationToggle" aria-label="Toggle Notifications" (click)="toggleNotifications()"> 
+            <i 
+            class="fa-solid" 
+            [matBadge]="!notificationsOpened ? 15 : null" 
+            matBadgeColor="warn"
+            [ngClass]="{'fa-bell': !notificationsOpened, 'fa-times': notificationsOpened}"></i>
+        </button>
+        <button class="avatar-sm" mat-button [matMenuTriggerFor]="menu">
+            <img src="https://via.placeholder.com/150" alt="User Avatar">
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/account']" routerLinkActive="active">
+                <span class="mr-2">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <span class="mr-2">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </span>
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+    </mat-toolbar>
+</div>

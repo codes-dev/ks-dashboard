@@ -1,0 +1,22 @@
+<div class="core">
+    <app-core-toolbar 
+    (toggled)="toggleSidenav($event)" 
+    (toggledNotifications)="toggleNotofications($event)" 
+    [notificationsOpened]="notifications.opened"
+    [expanded]="expanded"></app-core-toolbar>
+    <mat-sidenav-container autosize>
+        <mat-sidenav #sidenav mode="side" [fixedInViewport]="true" opened>
+            <app-core-sidenav [expanded]="expanded"></app-core-sidenav>
+        </mat-sidenav>
+        <mat-sidenav #notifications id="notifications" mode="over" position="end" [fixedInViewport]="true">
+            <app-notifications-wigdet></app-notifications-wigdet>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="page">
+                <div id="core-overlay" class="overlay" [style]="{display: expanded ? 'block' : 'none'}" (click)="toggleSidenav(!expanded)"></div>
+                <app-core-utilsbar></app-core-utilsbar>
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>      
+</div>

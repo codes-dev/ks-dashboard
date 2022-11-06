@@ -1,0 +1,42 @@
+.sidenav {
+    padding: 2rem 0;
+    transition: all 0.1s ease-in-out;
+
+    & .append {
+        display: none;
+        width: 0;
+        overflow-x: hidden;
+        font-size: 1.05rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+    }
+
+    &.expanded {
+
+        & .append {
+            display: inline-block;
+            width: unset;
+        }
+    }
+
+    & > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+
+        &:hover, &:focus, &.active {
+            background: rgba($color: #000000, $alpha: .25);
+        }
+
+        &.active {
+            color: gainsboro;
+        }
+    }
+
+    & .icon {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,19 @@
+.notifications-wigdet {
+    padding: 1rem;
+    min-width: 400px;
+
+    & h2 {
+        color: white;
+    }
+
+    & .notifications {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: calc(100% - 100px);
+
+        & > * {
+            min-width: 300px;
+        }
+    }
+}

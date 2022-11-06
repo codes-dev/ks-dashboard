@@ -1,0 +1,10 @@
+<ul class="breadcrumb">
+    <li class="home">
+        <a [routerLink]="['/']">
+          <i class="fa-solid fa-house"></i>
+        </a>
+    </li>
+    <li *ngFor="let breadcrumb of (breadcrumbs | async)">
+      <a [routerLink]="breadcrumb.url.split('/')">{{ breadcrumb.label }}</a>
+    </li>
+</ul>

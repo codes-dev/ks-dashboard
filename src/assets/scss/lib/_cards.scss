@@ -1,0 +1,31 @@
+.card {
+  background: white;
+  min-width: 0;
+  position: relative;
+  border: 1px solid rgba(0,0,0,.125);
+  -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  backface-visibility: hidden;
+  height: 100%;
+  border-radius: 10px;
+
+  &.elevated {
+      box-shadow: 0 4px 8px 0 rgba($color: #000000, $alpha: 0.2);
+
+      &:hover {
+          box-shadow: 0 8px 16px 0 rgba($color: #000000, $alpha: 0.2);
+      }
+  }
+
+  &.translate-z {
+      transform: translateZ(0);
+      transition: transform 0.25s ease-out;
+
+      &:hover {
+          cursor: pointer;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          transform: scale(1.05);
+      }
+  }
+}
